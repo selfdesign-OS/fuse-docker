@@ -1,5 +1,5 @@
 # Ubuntu 22.04 이미지를 기반으로 합니다.
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # 필요한 패키지를 설치
 RUN apt-get update && apt-get install -y \

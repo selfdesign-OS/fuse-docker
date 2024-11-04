@@ -12,5 +12,6 @@ services:
       - SYS_ADMIN  # FUSE 사용을 위한 권한 추가
     devices:
       - /dev/fuse  # FUSE 장치 추가
+      - /dev/cuse  # CUSE 장치 추가
     security_opt:
       - apparmor:unconfined  # AppArmor 보안 제한 해제

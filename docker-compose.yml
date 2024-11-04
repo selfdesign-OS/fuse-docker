@@ -7,3 +7,4 @@ services:
     volumes:
       - .:/home/ubuntu/project
     tty: true
+    stdin_open: true  # 표준 입력을 열어 대화형으로 사용

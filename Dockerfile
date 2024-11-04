@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     meson \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt update && apt install -y fuse
+# RUN apt update && apt install -y fuse
 
 # 가상 환경 생성
 RUN python3 -m venv /opt/venv

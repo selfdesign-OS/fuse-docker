@@ -3,8 +3,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: fuse-container  # 컨테이너 이름을 fuse-con으로 설정
+    container_name: fuse-container  # 컨테이너 이름을 fuse-container로 설정
     volumes:
       - .:/home/ubuntu/project
     tty: true
     stdin_open: true  # 표준 입력을 열어 대화형으로 사용
+    cap_add:
+      - SYS_ADMIN  # FUSE 사용을 위한 권한 추가
+    devices:
+      - /dev/fuse  # FUSE 장치 추가
+    security_opt:
+      - apparmor:unconfined  # AppArmor 보안 제한 해제

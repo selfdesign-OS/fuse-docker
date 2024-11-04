@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: fuse-container  # 컨테이너 이름을 fuse-container로 설정
+    privileged: true
     volumes:
       - .:/home/ubuntu/project
     tty: true

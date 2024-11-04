@@ -1,0 +1,9 @@
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fuse-container  # 컨테이너 이름을 fuse-con으로 설정
+    volumes:
+      - .:/home/ubuntu/project
+    tty: true
